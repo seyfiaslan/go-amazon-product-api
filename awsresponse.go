@@ -64,6 +64,12 @@ type BrowseNode struct {
 	Ancestors struct {
 		BrowseNode []BrowseNode
 	}
+	TopItemSet []struct {
+		TopItem []struct {
+			ASIN  string `xml:"ASIN"`
+			Title string
+		}
+	}
 }
 
 // ItemAttributes response group
