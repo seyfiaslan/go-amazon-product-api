@@ -200,3 +200,14 @@ type ImageSet struct {
 	MediumImage    *Image
 	LargeImage     *Image
 }
+
+type MultipleItemLookupResponse struct {
+	AWSResponse
+	Items struct {
+		Request struct {
+			IsValid           bool
+			ItemLookupRequest ItemLookupRequest
+		}
+		Item []Item `xml:"Item"`
+	}
+}
